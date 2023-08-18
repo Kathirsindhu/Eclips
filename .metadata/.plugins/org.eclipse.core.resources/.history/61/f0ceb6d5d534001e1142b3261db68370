@@ -1,0 +1,18 @@
+package special;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Practice {
+	public static void main(String[] args) {
+		String a = "hhaaii";
+		char[] b = a.toCharArray();
+		for (int i = 0; i < b.length; i++) {
+			for (int j = 0; j < b.length; i++) {
+				if (b[i] == b[j]) {
+					System.out.println(b[j]);
+				}
+			}
+		}
+	}
+}

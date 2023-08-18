@@ -1,0 +1,19 @@
+package special;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Practice2 {
+	public static void main(String[] args) {
+		someMethod("hai");
+	}
+
+	static void someMethod(Object o) {
+		System.out.println("I am Object");
+	}
+
+	static void someMethod(String s) {
+		System.out.println("I am String");
+	}
+}

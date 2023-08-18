@@ -1,0 +1,19 @@
+package interviewPrograms;
+
+import java.util.HashMap;
+
+public class Secondlargestinarray {
+	public static void main(String[] args) {
+		int[] a = { 100, 14, 46, 47, 94, 94, 52, 86, 36, 94, 89 };
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i; j < a.length; j++) {
+				if (a[i] == a[j]) {
+					map.put(a[i], map.get(a[i]) + 1);
+				} else {
+					map.put(a[i], 1);
+				}
+			}
+		}
+	}
+}

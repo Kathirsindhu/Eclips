@@ -1,0 +1,35 @@
+package special;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class Naveen {
+	public static void main(String[] args) {
+		String a = "kathiravan kaveen kydhdkn kaveen";
+		String[] b = a.split(" ");
+		HashSet<String> c = new HashSet<>();
+		for (int j = 0; j < b.length - 1; j++) {
+			if (b[j].charAt(0) == b[j + 1].charAt(0)) {
+				if (b[j].charAt(b[j].length() - 1) == b[j + 1].charAt(b[j + 1].length() - 1)) {
+					c.add(b[j]);
+					c.add(b[j + 1]);
+				}
+			}
+		}
+		c.forEach(x -> System.out.print(x + ","));
+		Long aa = c.stream().count();
+		System.out.println(aa);
+		HashMap<String, Integer> ka = new HashMap<>();
+		for (int i = 0; i < b.length; i++) {
+			if (ka.containsKey(b[i])) {
+				ka.put(b[i], ka.get(b[i] + 1));
+			} else {
+				ka.put(b[i], 1);
+			}
+		}
+		ka.forEach((x,y)->{
+			System.out.println(x+" "+y);
+		});
+	}
+
+}

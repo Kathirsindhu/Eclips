@@ -1,0 +1,50 @@
+package interviewPrograms;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Iterator;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+
+public class ReadExcelFile {
+
+	public static void main(String[] args) throws IOException {
+		// Get the Excel file path
+		String excelFilePath = "/path/to/excel/file.xls";
+
+		// Create a FileInputStream object to read the Excel file
+		FileInputStream fis = new FileInputStream(excelFilePath);
+
+		// Create a Workbook object from the FileInputStream object
+		HSSFWorkbook workbook = new HSSFWorkbook(fis);
+
+		// Get the first sheet from the workbook
+		Sheet sheet = workbook.getSheetAt(0);
+
+		// Iterate over the rows in the sheet
+		Iterator<Row> rowIterator = sheet.iterator();
+		while (rowIterator.hasNext()) {
+			// Get the current row
+			Row row = rowIterator.next();
+
+			// Iterate over the cells in the row
+			Iterator<Cell> cellIterator = row.iterator();
+			while (cellIterator.hasNext()) {
+				// Get the current cell
+				Cell cell = cellIterator.next();
+
+				// Get the cell value
+				String cellValue = cell.getStringCellValue();
+
+				// Print the cell value
+				System.out.println(cellValue);
+			}
+		}
+
+		// Close the workbook
+		workbook.close();
+	}
+}

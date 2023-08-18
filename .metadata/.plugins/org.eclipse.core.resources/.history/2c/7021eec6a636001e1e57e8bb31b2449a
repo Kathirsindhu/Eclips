@@ -1,0 +1,8 @@
+package Exception;
+
+public class LogininException extends Exception{
+	String a;
+	public LoginException(String a) {
+		super();
+	}
+}

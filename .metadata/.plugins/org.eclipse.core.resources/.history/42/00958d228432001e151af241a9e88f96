@@ -1,0 +1,21 @@
+package special;
+
+public class Anagram {
+	public static void main(String[] arg) {
+		String a = "hia";
+		String b = "ahi";
+		boolean bb = false;
+		char[] ch = a.toCharArray();
+		char[] ch2 = b.toCharArray();
+		if (ch.length == ch2.length) {
+			for (Character x : ch) {
+				for (Character y : ch2) {
+					if (x == y) {
+						bb = true;
+					}
+				}
+			}
+		}
+		System.out.println(bb);
+	}
+}

@@ -1,0 +1,20 @@
+package special;
+
+import java.util.HashMap;
+
+public class ChallengefromMithu {
+	public static void main(String[] args) {
+		HashMap<String, Long> muthu = new HashMap<>();
+		muthu.put("mthu", 9865324157l);
+		muthu.put("kathir", 568974562l);
+		muthu.put("varun", 9865478542221l);
+		muthu.put("eng", 5478963214l);
+//		for (String x : muthu.keySet()) {
+//			System.out.println(x);
+//		}
+		for (Long y : muthu.values()) {
+			System.out.println(y);
+		}
+
+	}
+}

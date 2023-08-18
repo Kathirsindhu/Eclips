@@ -1,0 +1,16 @@
+package special;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Practice3 {
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+		a = a + b;
+		b = a - b;
+		a = a - b;
+		System.out.println(a + "   " + b);
+	}
+}

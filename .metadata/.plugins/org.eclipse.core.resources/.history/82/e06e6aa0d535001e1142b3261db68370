@@ -1,0 +1,11 @@
+package interviewPrograms2;
+
+public class Removing {
+	public static void main(String[] args) {
+		String a = "abc123def";
+		String b = a.substring(0,3);
+		String c = a.substring(3,6);
+		String d = a.substring(6,8);
+		System.out.println(b+" "+c+" "+d);
+	}
+}

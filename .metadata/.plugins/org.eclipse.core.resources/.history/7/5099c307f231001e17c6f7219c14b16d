@@ -1,0 +1,13 @@
+package day1;
+
+public class Final {
+	final int a = 88;
+	public void get() {
+		int a = 55;
+	}
+	public static void main(String[] args) {
+		Final f = new Final();
+		f.get();
+	}
+		
+}

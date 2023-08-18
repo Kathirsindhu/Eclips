@@ -1,0 +1,22 @@
+package special;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Practice2 {
+	public static void main(String[] args) {
+		int a = 5;
+		System.out.println(recursionq(a));
+		System.out.println(10+20+"java");
+		System.out.println("java"+10+20);
+	}
+
+	public static int recursionq(int a) {
+		if (a == 0 || a == 1) {
+			return 1;
+		} else {
+			return a * recursionq(a - 1);
+		}
+	}
+}

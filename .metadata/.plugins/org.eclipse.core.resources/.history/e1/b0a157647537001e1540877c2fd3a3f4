@@ -1,0 +1,21 @@
+package special;
+
+import java.util.HashSet;
+
+public class Naveen {
+	public static void main(String[] args) {
+		String a = "kathiravan kaveen kydhdkn kaveen";
+		String [] b = a.split(" ");
+		HashSet<String> c = new HashSet<>();
+			for(int j=0;j<b.length-1;j++) {
+				if(b[j].charAt(0) == b[j+1].charAt(0)) {
+					if(b[j].charAt(b[j].length()-1) == b[j+1].charAt(b[j+1].length()-1)) {
+						c.add(b[j]);
+						c.add(b[j+1]);
+					}
+				}
+			}
+			c.forEach(x->System.out.println(x));
+		}
+	
+}

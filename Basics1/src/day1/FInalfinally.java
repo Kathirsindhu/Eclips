@@ -1,0 +1,17 @@
+package day1;
+
+public class FInalfinally {
+	@Override
+	public void finalize() {
+		System.out.println("colleted");
+	}
+
+	public static void main(String[] args) {
+		FInalfinally f1 = new FInalfinally();
+		System.out.println(f1.hashCode());
+
+		f1 = new FInalfinally();
+		System.out.println(f1.hashCode());
+		System.gc();
+	}
+}

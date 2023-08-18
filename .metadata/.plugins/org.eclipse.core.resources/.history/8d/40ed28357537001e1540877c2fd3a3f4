@@ -1,0 +1,16 @@
+package special;
+
+public class Naveen {
+	public static void main(String[] args) {
+		String a = "kathiravan kaveen kydhdkn";
+		String [] b = a.split(" ");
+			for(int j=0;j<b.length-1;j++) {
+				if(b[j].charAt(0) == b[j+1].charAt(0)) {
+					if(b[j].charAt(b[j].length()-1) == b[j+1].charAt(b[j+1].length()-1)) {
+						System.out.println(b[j]+" "+b[j+1]+" ful fills the given condition");
+					}
+				}
+			}
+		}
+	
+}

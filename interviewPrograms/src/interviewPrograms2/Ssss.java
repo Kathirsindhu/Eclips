@@ -1,0 +1,22 @@
+package interviewPrograms2;
+
+import java.util.Arrays;
+
+public class Ssss {
+	public static void main(String[] args) {
+		String a = "java is a programming lamguage";
+		String[] b = a.split(" ");
+		for (int i = 0; i < b.length - 1; i++) {
+			for (int j = 0; j < b.length - i - 1; j++) {
+				if (b[j].length() > b[j + 1].length()) {
+					String temp = b[j];
+					b[j] = b[j + 1];
+					b[j + 1] = temp;
+				}
+			}
+
+		}
+		String aa = String.join(" ", b);
+		System.out.println(aa);
+	}
+}

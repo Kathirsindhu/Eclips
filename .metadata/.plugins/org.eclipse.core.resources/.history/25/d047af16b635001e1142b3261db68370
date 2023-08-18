@@ -1,0 +1,15 @@
+package special;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Practice {
+	public static void main(String[] args) {
+		int a = 1;
+		while(a>=11) {
+			
+			System.out.println("hai");
+			a++;
+		}
+	}
+}

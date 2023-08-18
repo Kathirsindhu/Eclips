@@ -1,0 +1,10 @@
+package interviewPrograms;
+
+public class Three {
+	public static void main(String[] args) {
+		String a = "java";
+		String b = "deve";
+		String c = a.substring(0,2).concat(b).substring(2,4);
+		System.out.println(c);
+	}
+}

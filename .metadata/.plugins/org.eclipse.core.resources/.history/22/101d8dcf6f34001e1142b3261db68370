@@ -1,0 +1,25 @@
+package special;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Practice {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String word = "sucess";
+		String temp = " ";
+		char[] c = word.toCharArray();
+		HashMap<Character,Integer> map = new HashMap<>();
+		for(Character x : c) {
+			if(map.containsKey(x)) {
+				map.put(x, map.get(x)+1);
+				
+			}
+			else {
+				map.put(x, 1);
+			}
+		}
+		System.out.println(map.get(map));
+	}
+}

@@ -1,0 +1,22 @@
+package special;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Practice3 {
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 1;
+		for (int i = 2; i < a; i++) {
+			if (a % i == 0) {
+				b = 2;
+			}
+		}
+		if (b == 1) {
+			System.out.println("prime number");
+		} else {
+			System.out.println("not prime");
+		}
+	}
+}

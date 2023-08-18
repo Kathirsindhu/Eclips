@@ -1,0 +1,15 @@
+package day1;
+
+public class Final {
+	final int age = 88;
+
+	void getBy() {
+		int ae = 88;
+	}
+
+	public static void main(String[] args) {
+		Final f = new Final();
+		f.getBy();
+	}
+
+}

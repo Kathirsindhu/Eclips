@@ -1,0 +1,24 @@
+package day1;
+
+public class Threadsample2 implements Runnable {
+	public void run() {
+		synchronized (Threadsample2.class) {
+			System.out.println("hello");
+			try {
+				Threadsample2.class.wait(3000);
+				System.out.println("thread is waiting");
+			} catch (InterruptedException ie) {
+				// exception address details
+				ie.printStackTrace();
+			}
+		}
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		Threadsample2 t = new Threadsample2();
+		Thread t2 = new Thread(t);
+		t2.start();
+		Thread.sleep(5000);
+		System.out.println("hi");
+	}
+}
